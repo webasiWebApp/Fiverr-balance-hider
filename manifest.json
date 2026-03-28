@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Fiverr Price Hider",
+  "version": "1.0.0",
+  "description": "Hides all dollar amounts on Fiverr for privacy during screen recordings.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://www.fiverr.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.fiverr.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Fiverr Price Hider"
+  }
+}
